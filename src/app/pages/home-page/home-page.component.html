@@ -1,0 +1,43 @@
+<nz-layout class="app-layout">
+  <nz-sider class="menu-sidebar"
+            nzCollapsible
+            nzWidth="256px"
+            nzBreakpoint="md"
+            [(nzCollapsed)]="isCollapsed"
+            [nzTrigger]="null">
+    <div class="sidebar-logo">
+      <a target="_blank">
+        <nz-avatar [nzSize]="50" [nzIcon]="'user'"></nz-avatar>
+        <h1>e-publishers </h1>
+      </a>
+    </div>
+    <ul nz-menu nzTheme="dark"  nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+
+
+
+
+
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header>
+      <div class="app-header">
+        <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+            <i class="trigger"
+               nz-icon
+               [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+            ></i>
+        </span>
+      </div>
+    </nz-header>
+    <nz-content class="contend">
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+
+    <nz-footer>e-com ©2019|Gihan Rathnayaka</nz-footer>
+
+
+  </nz-layout>
+</nz-layout>
